@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let flashcard of flashcards">
+            <td>{{flashcard.question}}</td>
+            <td>{{flashcard.answer}}</td>
+        </tr>
+    </tbody>
+</table>
