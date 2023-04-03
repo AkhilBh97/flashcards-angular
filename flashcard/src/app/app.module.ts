@@ -5,6 +5,8 @@ import { FlashcardsComponent } from './components/flashcards/flashcards.componen
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,6 @@
+.hidden-ans{
+    visibility: hidden;
+}
+.revealed-ans{
+    visibility: visible;
+}
