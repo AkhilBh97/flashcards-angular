@@ -1,0 +1,13 @@
+<div>
+    <mat-card *ngFor="let flashcard of flashcards" style="max-width: 400px;border: 1px solid black;">
+        <mat-card-header>
+            <mat-card-title>{{flashcard.question}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content style="visibility: hidden;">
+            <p>{{flashcard.answer}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button (click)="toggleAnswer($event.target)">TOGGLE ANSWER</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

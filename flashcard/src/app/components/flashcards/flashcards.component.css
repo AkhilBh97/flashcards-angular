@@ -1,6 +1,4 @@
-.hidden-ans{
-    visibility: hidden;
-}
-.revealed-ans{
-    visibility: visible;
+app-flashcard-card, app-flashcard-table {
+    position:fixed;
+    top: 5%;
 }
