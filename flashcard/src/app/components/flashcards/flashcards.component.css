@@ -1,4 +1,4 @@
-app-flashcard-card, app-flashcard-table {
-    position:fixed;
+#cardviews * {
+    position:absolute;
     top: 5%;
 }

@@ -16,6 +16,7 @@ import { FlashcardAddDialogComponent } from './components/flashcard-add-dialog/f
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { FlashcardEditDialogComponent } from './components/flashcard-edit-dialog/flashcard-edit-dialog.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
     FlashcardTableComponent,
     FlashcardCardComponent,
     FlashcardAddDialogComponent,
+    FlashcardEditDialogComponent,
   ],
   imports: [
     AppRoutingModule,
