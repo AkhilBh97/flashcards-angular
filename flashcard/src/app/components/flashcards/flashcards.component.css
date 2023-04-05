@@ -1,4 +1,13 @@
+
+#cardbuttons {
+    position: fixed;
+}
+
 #cardviews * {
-    position:absolute;
-    top: 5%;
+    position:fixed;
+    top:5%;
+}
+
+app-flashcard-table {
+    border: 1px solid black;
 }

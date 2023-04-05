@@ -1,14 +1,11 @@
-<header id="cardbuttons" align="center">
-    <mat-slide-toggle id="cttogle" (change)="toggleCardTable($event)">Cards/Table</mat-slide-toggle>
-    <button mat-button (click)="openAddDialog()">Add a Flashcard</button>
-</header>
-<main style="display: block;" align="center">
-    <div id="cardviews">
-        <app-flashcard-card [flashcards]="this.flashcards"
-        [style]="'visibility:'+[this.cardvis]+';'"></app-flashcard-card>
-        <app-flashcard-table [flashcards]="this.flashcards"
-            (deletehandler)="deleteFlashcard($event)"
-            (edithandler)="openEditDialog($event)"
-            [style]="'visibility:'+[this.tabvis]+';'"></app-flashcard-table>
+<div id="cardscomponent">
+    <div id="cardbuttons">
+        <mat-slide-toggle id="cttogle" (change)="toggleCardTable($event)">Cards/Table</mat-slide-toggle>
+        <button mat-button (click)="openAddDialog()">Add a Flashcard</button>
     </div>
-</main>
+    <div id="cardviews">
+        <app-flashcard-card [flashcards]="this.flashcards" [style]="'visibility:'+[this.cardvis]+';'"></app-flashcard-card>
+        <app-flashcard-table [flashcards]="this.flashcards" (deletehandler)="deleteFlashcard($event)"
+            (edithandler)="openEditDialog($event)" [style]="'visibility:'+[this.tabvis]+';'"></app-flashcard-table>
+    </div>
+</div>
