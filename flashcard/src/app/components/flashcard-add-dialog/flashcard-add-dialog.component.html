@@ -4,7 +4,7 @@
     
         <mat-form-field hintLabel="Max 256 characters" appearance="fill">
             <mat-label>Card Question</mat-label>
-            <textarea matInput #input maxlength="256" formControlName="question" placeholder="Ex. What is your name?"></textarea>
+            <textarea matInput #input maxlength="256" formControlName="question" placeholder="Ex. What is 2+2?"></textarea>
             <mat-hint align="end">{{input.value.length}}/256</mat-hint>
         </mat-form-field>
 
@@ -12,7 +12,7 @@
 
         <mat-form-field hintLabel="Max 256 characters" appearance="fill">
             <mat-label>Card Answer</mat-label>
-            <textarea matInput #input2 maxlength="256" formControlName="answer" placeholder="Ex. Mason"></textarea>
+            <textarea matInput #input2 maxlength="256" formControlName="answer" placeholder="Ex. 4"></textarea>
             <mat-hint align="end">{{input2.value.length}}/256</mat-hint>
         </mat-form-field>
         <!--p *ngIf="showErr">Both entries must not be empty</p><p *ngIf="showErr"> or more than 256 characters</p-->
