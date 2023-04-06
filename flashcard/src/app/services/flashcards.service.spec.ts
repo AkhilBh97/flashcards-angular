@@ -28,7 +28,7 @@ describe('FlashcardsService', () => {
   });
 
   //test GET
-  it('should return a Flaschards observable', () => {
+  it('should return a Flaschards observable when Get is called', () => {
     //set up a fake list of cards
     const mockcards: Flashcard[] = [
       {flashcardID: '1', question: 'Question1', answer: 'Answer1'},
@@ -45,7 +45,7 @@ describe('FlashcardsService', () => {
   });
 
   //test POST
-  it('should add a flashcard', () => {
+  it('should add a flashcard when Post is called', () => {
     const newcard: Flashcard = {flashcardID: '1', question:'Q', answer:'A'};
     service.postFlashcard(newcard).subscribe(data => {
       expect(data).toEqual(newcard);
@@ -57,7 +57,7 @@ describe('FlashcardsService', () => {
   });
 
   //test PUT
-  it('should update a flashcard', () => {
+  it('should update a flashcard when Update is called', () => {
     const flashcard: Flashcard = {flashcardID:'1', question:'Q', answer:'A'};
     const spy = jasmine.createSpyObj<HttpClient>('HttpClient', ['put']);
     service = new FlashcardsService(spy);
@@ -72,7 +72,7 @@ describe('FlashcardsService', () => {
   });
 
   //test DELETE
-  it('should delete a flashcard', () => {
+  it('should delete a flashcard when Delete is called', () => {
     const flashcard: Flashcard = {flashcardID:'1', question:'Q', answer:'A'};
     const spy = jasmine.createSpyObj<HttpClient>('HttpClient', ['delete']);
     service = new FlashcardsService(spy);

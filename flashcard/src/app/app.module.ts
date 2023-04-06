@@ -5,7 +5,7 @@ import { FlashcardsComponent } from './components/flashcards/flashcards.componen
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FlashcardTableComponent } from './components/flashcard-table/flashcard-table.component';
@@ -31,7 +31,7 @@ import { FlashcardEditDialogComponent } from './components/flashcard-edit-dialog
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,
-    BrowserAnimationsModule,
+    //BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
     MatSlideToggleModule,
