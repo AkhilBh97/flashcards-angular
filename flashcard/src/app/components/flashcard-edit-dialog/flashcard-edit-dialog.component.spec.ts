@@ -44,4 +44,28 @@ describe('FlashcardEditDialogComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should trigger close on Close click', () => {
+    const dialogrefinject = TestBed.inject(MatDialogRef);
+    spyOn(dialogrefinject, 'close');
+    const closebutton = fixture.debugElement.nativeElement.querySelector('#closeeditdiagbutton');
+
+    closebutton.click();
+
+    expect(dialogrefinject.close).toHaveBeenCalled();
+  });
+
+  it('should trigger save on Save click', () => {
+    
+    spyOn(component, 'save');
+    const createbutton = fixture.debugElement.nativeElement.querySelector('#savebutton');
+    const formvalue = {id:'1', question:'Q', answer:'A'};
+
+    component.form.setValue(formvalue);
+    fixture.detectChanges();
+    createbutton.click();
+
+    expect(component.save).toHaveBeenCalled();
+    expect(component.form.value).toEqual(formvalue);
+  });
 });
