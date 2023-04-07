@@ -3,11 +3,11 @@
         <mat-card-header>
             <mat-card-title>{{flashcard.question}}</mat-card-title>
         </mat-card-header>
-        <mat-card-content style="visibility: hidden;">
+        <mat-card-content class="cardanswer" style="visibility: hidden;">
             <p>{{flashcard.answer}}</p>
         </mat-card-content>
         <mat-card-actions>
-            <button (click)="toggleAnswer($event.target)">TOGGLE ANSWER</button>
+            <button class="toggleanswerbutton" (click)="toggleAnswer($event.target)">TOGGLE ANSWER</button>
         </mat-card-actions>
     </mat-card>
 </div>

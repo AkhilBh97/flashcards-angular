@@ -15,8 +15,8 @@ export class FlashcardCardComponent {
 
   toggleAnswer(target: any){
     const cardcontent = target.parentNode.parentNode.querySelector('mat-card-content');
-    var csv = cardcontent.style.visibility;
-    if (csv === 'inherit') cardcontent.style.visibility = 'hidden';
-    else cardcontent.style.visibility = 'inherit';
+    var csv = cardcontent.getAttribute('style');
+    if (csv.includes('inherit')) cardcontent.setAttribute('style', csv.replace('inherit', 'hidden'));
+    else cardcontent.setAttribute('style', csv.replace('hidden', 'inherit'));
   }
 }
