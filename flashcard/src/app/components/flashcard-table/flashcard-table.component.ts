@@ -20,7 +20,6 @@ export class FlashcardTableComponent {
   }
 
   onEdit(flashcard: Flashcard){
-    //console.log(`called onEdit() with guid: ${flashcard.flashcardID}\nq: ${flashcard.question}\na: ${flashcard.answer}`);
     this.edithandler.emit(flashcard);
   }
 }

@@ -3,16 +3,14 @@
     <mat-dialog-content [formGroup]="form">
         <mat-form-field appearance="fill">
             <mat-label>Question</mat-label>
-            <textarea matInput #input maxlength="256" formControlName="question" placeholder={{this.flashcard.question}}></textarea>
-
+            <textarea matInput #input maxlength="256" formControlName="question" placeholder={{this.question}}></textarea>
         </mat-form-field>
         <br />
 
         <mat-form-field appearance="fill">
             <mat-label>Answer</mat-label>
-            <textarea matInput #input maxlength="256" formControlName="answer" placeholder={{this.flashcard.answer}}></textarea>
+            <textarea matInput #input maxlength="256" formControlName="answer" placeholder={{this.answer}}></textarea>
         </mat-form-field>
-
     </mat-dialog-content>
 
     <mat-dialog-actions>

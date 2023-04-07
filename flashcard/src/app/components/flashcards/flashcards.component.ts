@@ -63,16 +63,15 @@ export class FlashcardsComponent {
     dialogconfig.autoFocus = true;
 
     dialogconfig.data = {
-      flashcard: flashcard,
-      question: '',
-      answer: ''
+      id: flashcard.flashcardID,
+      question: flashcard.question,
+      answer: flashcard.answer
     }
 
     const dialogref = this.dialog.open(FlashcardEditDialogComponent, dialogconfig);
 
     dialogref.afterClosed().subscribe(
       data => {
-        data.flashcardID = flashcard.flashcardID;
         this.updateFlashcard(data);
       }
     )

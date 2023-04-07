@@ -10,7 +10,7 @@ import { Flashcard } from 'src/app/models/flashcard/flashcard';
 })
 export class FlashcardEditDialogComponent {
   form!:FormGroup;
-  flashcard: Flashcard;
+  id: string;
   question: string;
   answer: string;
 
@@ -18,15 +18,14 @@ export class FlashcardEditDialogComponent {
     private fb: FormBuilder,
     private dialogref: MatDialogRef<FlashcardEditDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data:any) {
-      this.flashcard = data.flashcard;
+      this.id = data.id;
       this.question = data.question;
       this.answer = data.answer;
     }
 
     ngOnInit(){
-      //console.log(`In Edit-diag:\nFlash: ${this.flashcard.flashcardID}\nQ:${this.flashcard.question}\nA:${this.flashcard.answer}`);
       this.form = this.fb.group({
-        id: [this.flashcard.flashcardID, []],
+        id: this.id!,
         question: [this.question, []],
         answer: [this.answer, []]
       });
