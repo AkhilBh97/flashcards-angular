@@ -10,8 +10,8 @@
                 <td>{{flashcard.question}}</td>
                 <td>{{flashcard.answer}}</td>
                 <td>
-                    <button mat-raised-button (click)="onEdit(flashcard)">Edit</button>
-                    <button mat-raised-button (click)="onDelete(flashcard)">Delete</button>
+                    <button class="tableeditbutton" mat-raised-button (click)="onEdit(flashcard)">Edit</button>
+                    <button class="tabledeletebutton" mat-raised-button (click)="onDelete(flashcard)">Delete</button>
                 </td>
             </tr>
         </tbody>
