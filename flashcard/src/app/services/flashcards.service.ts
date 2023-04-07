@@ -6,7 +6,7 @@ import { Flashcard } from '../models/flashcard/flashcard';
   providedIn: 'root'
 })
 export class FlashcardsService {
-  baseurl = 'http://localhost:5154/Flashcards';
+  baseurl = 'https://flashcards-ab.azurewebsites.net/Flashcards';
 
   constructor(private http: HttpClient) { 
   }
