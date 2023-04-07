@@ -25,7 +25,7 @@ export class FlashcardEditDialogComponent {
 
     ngOnInit(){
       this.form = this.fb.group({
-        id: this.id!,
+        id: [this.id, []],
         question: [this.question, []],
         answer: [this.answer, []]
       });

@@ -51,7 +51,8 @@ export class FlashcardsComponent {
 
     dialogref.afterClosed().subscribe(
       data => {
-        this.createflashcard(data);
+        const datafc:Flashcard = {flashcardID:data.id, question:data.question, answer:data.answer};
+        this.createflashcard(datafc);
       }
     );
   }
@@ -72,7 +73,8 @@ export class FlashcardsComponent {
 
     dialogref.afterClosed().subscribe(
       data => {
-        this.updateFlashcard(data);
+        const datafc:Flashcard = {flashcardID:data.id, question:data.question, answer:data.answer};
+        this.updateFlashcard(datafc);
       }
     )
   }
